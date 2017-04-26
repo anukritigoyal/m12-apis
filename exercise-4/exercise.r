@@ -29,7 +29,7 @@ movie.data.frame <- as.data.frame(movie.data)
 # Write a function called Director that accepts a data frame of movie info and returns
 # A vector of strings that states a movie and the director of said movie.
 Director <- function(input.movie.df) {
-  result <- paste(input.movie.df$Title, " was directed by ", input.movie.df$Director)
+  result <- paste(input.movie.df[1, "Title"], "was directed by", input.movie.df[1, "Director"])
   return(result)
 }
 
